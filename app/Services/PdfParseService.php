@@ -206,40 +206,9 @@ class PdfParseService
     {
         return "You are a professional PDF parsing AI assistant. Your task is to analyze PDF content and extract structured information in a consistent JSON format.
 
-IMPORTANT: You MUST return ONLY valid JSON. Do not include any markdown formatting, explanations, or text outside the JSON structure.
+        IMPORTANT: You MUST return ONLY valid JSON. Do not include any markdown formatting, explanations, or text outside the JSON structure.
 
-The JSON response should follow this exact structure:
-{
-  \"document_summary\": {
-    \"title\": \"extracted or inferred title\",
-    \"type\": \"document type (e.g., invoice, report, article, contract, etc.)\",
-    \"main_topic\": \"primary subject matter\",
-    \"summary\": \"2-3 sentence summary of the document\"
-  },
-  \"key_information\": {
-    \"dates\": [\"list of important dates found\"],
-    \"names\": [\"list of people, companies, or organizations mentioned\"],
-    \"amounts\": [\"list of monetary amounts, quantities, or measurements\"],
-    \"locations\": [\"list of locations, addresses, or geographical references\"]
-  },
-  \"content_structure\": {
-    \"sections\": [\"list of main sections or headings\"],
-    \"tables\": [\"summary of tables found with their content\"],
-    \"figures\": [\"list of figures, charts, or images mentioned\"]
-  },
-  \"extracted_text\": {
-    \"full_text\": \"complete extracted text (truncated if too long)\",
-    \"key_phrases\": [\"important phrases or terms\"],
-    \"technical_terms\": [\"specialized terminology used\"]
-  },
-  \"analysis\": {
-    \"sentiment\": \"overall tone or sentiment\",
-    \"complexity\": \"reading level or complexity assessment\",
-    \"confidence\": \"confidence level in the extraction (high/medium/low)\"
-  }
-}
-
-Ensure all fields are properly filled. If information is not available, use null or empty arrays as appropriate.";
+        Ensure all fields are properly filled. If information is not available, use null or empty arrays as appropriate.";
     }
 
     private function getStructuredUserPrompt(array $pdfData): string
