@@ -1,0 +1,25 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background rounded square with gradient -->
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6366F1;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Rounded square background -->
+  <rect x="10" y="10" width="160" height="160" rx="40" fill="url(#logoGradient)"/>
+  
+  <!-- Document icon -->
+  <path d="M45 30C45 26.6863 47.6863 24 51 24H108L153 69V153C153 156.314 150.314 159 147 159H51C47.6863 159 45 156.314 45 153V30Z" 
+        fill="white" fill-opacity="0.9"/>
+  
+  <!-- Document fold -->
+  <path d="M108 24L153 69H111C107.686 69 105 66.3137 105 63V24Z" 
+        fill="white" fill-opacity="0.7"/>
+  
+  <!-- Text lines -->
+  <rect x="60" y="75" width="80" height="8" rx="4" fill="#3B82F6"/>
+  <rect x="60" y="95" width="65" height="8" rx="4" fill="#3B82F6"/>
+  <rect x="60" y="115" width="50" height="8" rx="4" fill="#3B82F6"/>
+</svg>

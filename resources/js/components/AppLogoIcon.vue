@@ -13,12 +13,29 @@ defineProps<Props>();
 </script>
 
 <template>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 42" :class="className" v-bind="$attrs">
-        <path
-            fill="currentColor"
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M17.2 5.633 8.6.855 0 5.633v26.51l16.2 9 16.2-9v-8.442l7.6-4.223V9.856l-8.6-4.777-8.6 4.777V18.3l-5.6 3.111V5.633ZM38 18.301l-5.6 3.11v-6.157l5.6-3.11V18.3Zm-1.06-7.856-5.54 3.078-5.54-3.079 5.54-3.078 5.54 3.079ZM24.8 18.3v-6.157l5.6 3.111v6.158L24.8 18.3Zm-1 1.732 5.54 3.078-13.14 7.302-5.54-3.078 13.14-7.3v-.002Zm-16.2 7.89 7.6 4.222V38.3L2 30.966V7.92l5.6 3.111v16.892ZM8.6 9.3 3.06 6.222 8.6 3.143l5.54 3.08L8.6 9.3Zm21.8 15.51-13.2 7.334V38.3l13.2-7.334v-6.156ZM9.6 11.034l5.6-3.11v14.6l-5.6 3.11v-14.6Z"
-        />
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" :class="className" v-bind="$attrs">
+        <!-- Background rounded square with gradient -->
+        <defs>
+            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#6366F1;stop-opacity:1" />
+            </linearGradient>
+        </defs>
+        
+        <!-- Rounded square background -->
+        <rect x="2" y="2" width="28" height="28" rx="8" fill="url(#logoGradient)"/>
+        
+        <!-- Document icon -->
+        <path d="M8 6C8 5.44772 8.44772 5 9 5H19L25 11V26C25 26.5523 24.5523 27 24 27H9C8.44772 27 8 26.5523 8 26V6Z" 
+              fill="white" fill-opacity="0.9"/>
+        
+        <!-- Document fold -->
+        <path d="M19 5L25 11H20C19.4477 11 19 10.5523 19 10V5Z" 
+              fill="white" fill-opacity="0.7"/>
+        
+        <!-- Text lines -->
+        <rect x="11" y="14" width="10" height="1.5" rx="0.75" fill="#3B82F6"/>
+        <rect x="11" y="17" width="8" height="1.5" rx="0.75" fill="#3B82F6"/>
+        <rect x="11" y="20" width="6" height="1.5" rx="0.75" fill="#3B82F6"/>
     </svg>
 </template>
